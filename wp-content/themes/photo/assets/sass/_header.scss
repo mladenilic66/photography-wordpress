@@ -1,0 +1,171 @@
+.header {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.header-wrap {
+    position: relative;
+    padding: 208px 20px;
+    text-align: center;
+    h2 {
+        @include center-absolute;
+        font-family: $yesteryear;
+        font-weight: $regular;
+        @include super-small-screen {
+            font-size: 9vmin;
+        }
+    }
+    @include small-screen {
+        min-height: 460px;
+    }
+}
+
+.nav {
+    overflow: hidden;
+    ul {
+        li {
+            position: relative;
+            a {
+                padding: 15px;
+                color: $white-main;
+                font-weight: $thin;
+                @include small-screen {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+.nav.nav-main {
+    ul {
+        float: right;
+        li {
+            float: left;
+            flex: 1 1 auto;
+            transition: 1s;
+            a {
+                padding: 20px;
+                font-size: 1.2em;
+                text-transform: uppercase;
+
+            }
+            &:after {
+                position: absolute;
+                transition: .5s;
+                content: '';
+                width: 0;
+                left: 50%;
+                bottom: 0;
+                height: 1px;
+                background-color: $white-main;
+            }
+            &::after {
+                right: 0;
+            }
+            &:hover:after {
+                width: 100%;
+                left: 0;
+            }
+
+            @include small-screen {
+                float: none;
+            }
+
+        }
+
+        @include small-screen {
+            float: none;
+        }
+    }
+    @include small-screen {
+        display: none;
+    }
+}
+
+.nav-slide {
+    display: none;
+    @include small-screen {
+        margin-top: 20px;
+    }
+    @include medium-screen {
+        display: none;
+    }
+}
+
+.menu-bars {
+    display: none;
+    @include small-screen {
+        display: block;
+        position: fixed;
+    }
+    a {
+        color: $gold-main;
+    }
+}
+
+.cat-position {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include small-screen {
+        top: 0;
+    }
+}
+
+.nav.categories {
+    text-align: center;
+    ul {
+        li {
+            display: inline-block;
+            @include small-screen {
+                display: block;
+            }
+            a {
+                transition: .4s all ease;
+                font-family: $open-sans;
+                color: $white-transparent;
+                
+                &:hover {
+                    color: $gold-main;
+                }
+            }
+        }   
+    }
+}
+
+.menu-cat {
+    @include small-screen {
+        display: none;
+        position: relative;
+    }
+}
+
+.categories.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.active {
+    color: $gold-main;
+    -webkit-text-stroke: .5px $white-transparent;
+}
+
+.header .wrapper {
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 22px;
+    background: url('../../img/logo.png') center center / cover no-repeat;
+    @include small-screen {
+        display: none;
+    }
+}

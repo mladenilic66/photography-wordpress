@@ -1,0 +1,79 @@
+/* GENERAL */
+@charset "UTF-8";
+
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+    height: 100%; 
+}
+body {
+	width: 100%;
+	position: relative;
+    min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: $white-main;
+	font-family: $roboto;
+}
+hr {
+    border: 0;
+    height: 1px;
+	background-color: $grey-light;
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+p {
+	font-size: $paragraph;
+	margin: 0.6em 0 0.6em;
+	word-spacing: 2px;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+input,textarea {
+    box-sizing: border-box;
+}
+textarea {
+	width: 100%;
+	font-family: $roboto;
+	resize: vertical;
+}
+img {
+	vertical-align: top;
+	width: 100%;
+	height: auto;
+}
+label {
+	font-weight: 400;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+	height: auto;
+}
+button,[type="submit"],[type="file"] {
+	cursor: pointer;
+}
+a {
+	display: block;
+	&:link, &:visited {
+		text-decoration: none;
+	}
+
+}
+div,aside,section,header,main,article,span {
+	overflow: hidden;
+}

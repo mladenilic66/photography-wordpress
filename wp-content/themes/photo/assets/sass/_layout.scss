@@ -1,0 +1,215 @@
+// big screens
+@mixin big-screen {
+	@media screen and (min-width:1260px) {
+	    @content;
+	}
+}
+
+// large screens
+@mixin large-screen {
+	@media screen and (min-width:1024px) and (max-width:1260px) {
+	    @content;
+	}
+}
+
+// medium and tablet screens
+@mixin medium-screen {
+	@media screen and (min-width:768px) and (max-width:1024px) {
+	    @content;
+	}
+}
+
+// phone screens
+@mixin small-screen {
+	@media screen and (max-width:767px) {
+	    @content;
+	}
+}
+
+// phone screens
+@mixin super-small-screen {
+	@media screen and (max-width:400px) {
+	    @content;
+	}
+}
+
+// center content
+@mixin center-absolute {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+//buttons
+@mixin button {
+	outline: none;
+	padding: 10px;
+	font-size: $h6-size;
+	border: none;
+	background: transparent;
+	transition: .3s all ease;
+	box-shadow: inset 0 0 0 1px $white-transparent;
+	color: $white-transparent;
+	&:hover {
+		color: $white-main;
+		box-shadow: inset 0 0 0 1px $white-main;
+	}
+}
+
+@mixin btn-gold {
+	outline: none;
+	border: none;
+	background: transparent;
+	transition: .3s all ease;
+	box-shadow: inset 0 0 0 1px $gold-main;
+	color: $gold-main;
+	&:hover {
+		color: $gold-transparent;
+		box-shadow: inset 0 0 0 1px $gold-transparent;
+	}
+}
+
+::selection {
+	background-color: $gold-transparent;
+}
+.clear-fix {
+    content: "";
+    display: table;
+    clear: both;
+}
+.primary {
+	padding: 100px 40px;
+	@include small-screen {
+		padding: 0;
+    }
+}
+.wrapper {
+	max-width: 1200px;
+    margin: 0 auto;
+}
+.text-white {
+	color: $white-main;
+}
+.text-black {
+	color: $black-main;
+}
+
+.button {
+	@include button;
+}
+.btn-gold {
+	@include btn-gold;
+}
+
+//custom gallery css
+.masonry-brick {
+	img {
+	    filter: brightness(80%) grayscale(80%);
+	}
+	&:hover img {
+		filter: grayscale(0);
+	}
+}
+
+
+// about
+.about-top {
+	padding: 200px 20px;
+}
+.about-title {
+	h3 {
+		color: $grey-main;
+	}
+}
+.about-middle {
+	color: $grey-light;
+	background-color: $blue-header;
+	padding: 100px 20px;
+}
+.about-services {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	@include small-screen {
+		flex-direction: column;
+	}
+}
+.about-services-single {
+	border-radius: 20px;
+	text-align: center;
+	flex-basis: 25%;
+	padding: 40px;
+	background-color: $gold-transparent;
+	h4 {
+		margin-bottom: 50px;
+	}
+	svg {
+		font-size: 5em;
+	}
+	@include small-screen {
+		margin-bottom: 40px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+    }
+}
+
+// contact
+.contact-top,
+.contact-middle,
+.contact-bottom {
+	font-family: $josefin-sans;
+	text-align: center;
+}
+.contact-top {
+	padding: 150px 40px;
+	color: $grey-main;
+	background: url('../../img/hero-street.png') center center / cover no-repeat;
+	h1 {
+		font-family: $yesteryear;
+	}
+	p {
+		font-size: $paragraph-big;
+		@include small-screen {
+			font-size: $paragraph;
+		}
+	}
+}
+.contact-middle {
+	color: $grey-light;
+	padding: 180px 40px;
+	h1,h2,h3,h4,h5,h6 {
+		line-height: 40px;
+	}
+}
+.contact-bottom {
+	padding: 150px 40px;
+}
+
+.contact-form-wrap {
+	margin-top: 40px;
+}
+
+.wpcf7-form {
+	margin: 0 auto;
+	max-width: 400px;
+	margin-bottom: 20px;
+	input,textarea {
+		font-family: $josefin-sans;
+		border: 1px solid $grey-main-light;
+		font-size: 1.2em;
+		outline: none;
+		padding: 10px;
+		background: none;
+		width: 100%;
+		&::placeholder {
+			color: $grey-main-light;
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}

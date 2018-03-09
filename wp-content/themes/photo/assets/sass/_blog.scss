@@ -1,0 +1,338 @@
+.inner {
+    padding: 40px;
+    font-family: $josefin-sans;
+    background-color: $white;
+    @include small-screen {
+        padding: 40px 20px;
+    }
+}
+.post-outer {
+    max-width: 800px;
+    padding-right: 20px;
+    @include large-screen {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+    @include medium-screen {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+    @include small-screen {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+}
+.post-wrapper {
+    margin: 20px 0 80px 0;
+    color: $grey-main;
+    h3 {
+        a {
+            transition: .5s all ease;
+            color: $grey-main;
+            &:hover {
+                color: $gold-main;
+            }
+        }
+    }
+    &:last-of-type {
+        margin: 0;
+    }
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+.post-info a,
+.post-info span,
+.post-inner,
+.post-image,
+.post-outer,
+.post-summary,
+.single-post-tags p {
+    float: left;
+}
+
+.post-info a {
+    color: $grey-main-light;
+}
+.post-image {
+    z-index: 0;
+    position: relative;
+    width: 50%;
+    padding-right: 20px;
+    transition: .7s all ease;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+    @include small-screen {
+        padding-right: 0;
+        width: 100%;
+    }
+}
+.type-projects {
+    width: 100%;
+}
+.post-read-more {
+    display: none;
+    @include center-absolute;
+}
+
+.post-summary {
+    width: 50%;
+    a {
+        color: $gold-main;
+    }
+    p {
+        font-size: $paragraph-big;
+        margin:0;
+    }
+    @include small-screen {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+//single post
+.single-post-image,
+.single-summary,
+.single-post-footer {
+    width: 100%;
+}
+.single-summary {
+    max-width: 100%;
+    margin-top: 40px;
+    ul {
+        list-style: initial;
+        padding-left: 50px;
+    }
+    a {
+        color: $gold-main;
+    }
+    p {
+        font-size: $paragraph-big;
+    }
+    figure {
+        margin: 10px;
+    }
+}
+.single-post-tags {
+    a {
+        color: $grey-main;
+        float: left;
+        margin: 0 10px 10px 0;
+        padding: 7px;
+        box-shadow: inset 0 0 0 1px $grey-main-light;
+    }
+}
+.single-tags-edit {
+    a {
+        color: $grey-main;
+    }
+}
+.post-next-prev {
+    margin: 50px 0;
+    a {
+        transition: .5s all ease;
+        color: $grey-main;
+        font-size: $paragraph-big;
+        &:nth-child(1) {
+            float: left;
+            @include small-screen {
+                margin-bottom: 40px;
+                float: none;
+            }
+        }
+        &:nth-child(2) {
+            float: right;
+            @include small-screen {
+                float: none;
+            }
+        }
+        &:hover {
+            color: $gold-main;
+        }
+        @include small-screen {
+            text-align: center;
+        }
+    }
+}
+
+.pagination {
+    margin-top: 50px;
+}
+.nav-links {
+    a {
+        padding: 5px;
+        display: inline-block;
+        color: $grey-main-light;
+    }
+    span {
+        padding: 5px;
+    }
+}
+
+// widgets
+#wp-calendar {
+    width: 100%;
+    caption {
+        margin-bottom: 10px;
+    }
+    tbody {
+        text-align: center;
+    }
+    #today {
+        background: $gold-transparent;
+    }
+}
+
+.tagcloud {
+    margin-top: 20px;
+}
+.tag-cloud-link {
+    float: left; 
+    margin-right: 5px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+
+
+//comment section
+.post-comments-wrapper {
+    color: $grey-main;
+}
+.comment-metadata,.fn {
+    position: absolute;
+    left: 70px;
+}
+.url {
+    color: $black-main;
+}
+.fn {
+    min-width: 200px;
+    bottom: 0;
+}
+.says {
+    display: none;
+    left: 0;
+}
+.comments-title,#reply-title {
+    color: $grey-main;
+}
+.comment-author {
+    overflow: visible;
+    position: relative;
+    float: left;
+}
+.comment-list {
+    color: $grey-main;
+    font-size: $paragraph;
+    padding: 0;
+    .children {
+        padding: 40px;
+        list-style: none;
+        border-left: 3px solid $gold-transparent;
+        border-top: 1px solid $grey-light;
+        border-right: 1px solid $grey-light;
+        border-bottom: 1px solid $grey-light;
+        @include small-screen {
+            padding: 10px;
+        }
+    }
+    @include small-screen {
+        font-size: 14px;
+    }
+}
+.comment-awaiting-moderation {
+    position: absolute;
+    top: 8px;
+    left: 70px;
+    color: $gold-main;
+    @include small-screen {
+        font-size: 14px;
+    }
+}
+.comment-metadata {
+    a {
+        color: $black-main;
+    }
+    @include small-screen {
+        position: relative;
+        left: 10px;
+        top: 0;
+    }
+}
+.comment-content {
+    clear: both;
+    p {
+        font-size: $paragraph-medium;
+        margin-bottom: 40px;
+    }
+    a {
+        color: $gold-main;
+    }
+}
+.edit-link {
+    a {
+        color: $blue-main;
+    }
+}
+.comment-form {
+    a {
+        color: $gold-main;
+    }
+    textarea,#author,#email,#url {
+        font-size: $paragraph;
+        font-family: $josefin-sans;
+        outline: none;
+        padding: 10px;
+        border: 1px solid $grey-light;
+    }
+    label {
+        color: $grey-main;
+    }
+    #author,#email,#url {
+        width: 100%;
+    }
+}
+.comment-form-comment {
+    margin-top: 30px; 
+}
+.form-submit {
+    #submit {
+        padding: 7px;
+        font-size: $paragraph;
+        @include btn-gold;
+        font-family: $josefin-sans;
+    }
+}
+.comment-respond,#comments {
+    margin-top: 50px;
+}
+.comment-body {
+    position: relative;
+    margin-bottom: 50px;
+}
+.comment-reply-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7px;
+    @include btn-gold;
+}
+
+.page-content {
+    p {
+        font-size: $paragraph-big;
+    }
+}
+
+//archive
+.page-title {
+    margin-bottom: 50px;
+    color: $gold-main;
+}

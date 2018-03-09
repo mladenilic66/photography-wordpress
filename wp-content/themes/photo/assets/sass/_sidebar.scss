@@ -1,0 +1,85 @@
+.sidebar {
+	color: $grey-main;
+    padding: 20px;
+    box-shadow: inset 0 0 0 1px $grey-light;
+    a {
+    	color: $grey-main;
+    }
+
+    @include large-screen {
+		width: 100%;
+    }
+    @include medium-screen {
+		width: 100%;
+    }
+    @include small-screen {
+		width: 100%;
+    }
+}
+
+.search-form {
+	input[type="search"] {
+		width: 100%;
+		padding: 14px;
+		background-color: transparent;
+		border: 1px solid $grey-light;
+		font-size: $h6-size;
+		font-family: $josefin-sans;
+		&::placeholder {
+			color: $grey-main;
+			font-weight: $light;
+		}
+	}
+	input[type="submit"] {
+		display: none;
+	}
+}
+.sidebar-wrap {
+	font-size: $paragraph;
+    margin-bottom: 40px;
+	p {
+		margin-top: 20px;
+		text-transform: uppercase;
+	}
+	ul {
+		li {
+			margin: 10px 0;
+			a {
+				transition: .5s all ease;
+				&:nth-child(2n) {
+					margin: 0 7px;
+				}
+				&:hover {
+					color: $gold-main;
+				}
+			}
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	svg {
+		margin-right: 5px;
+		float: left;
+	}
+}
+
+.recentcomments {
+	.comment-author-link {
+		&::before {
+			margin-right: 5px;
+    		font-family: "FontAwesome";
+    		content: "";
+		}
+	}
+}
+
+.sidebar-comments {
+	ul {
+		li {
+			a {
+				float: left;
+			}
+		}
+	}
+}
